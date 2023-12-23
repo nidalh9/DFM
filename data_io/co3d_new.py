@@ -74,7 +74,7 @@ class CO3DDataset(Dataset):
         categories: List[str] = ['hydrant'],
         image_size: int = 64,
         stage: str = "train",
-        filter_num: int = 500,
+        filter_num: int = 0,
         scale_aug_ratio: float = 0,
         mean_depth_scale: float =10.0,
         noise: float = 0.0,
