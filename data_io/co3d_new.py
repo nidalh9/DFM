@@ -378,7 +378,7 @@ def init_info_file(categories, dataset_root):
     os.makedirs('dataset_cache_new', exist_ok=True)
 
     for category_index, category in enumerate(tqdm(categories)):
-        dataset_map = get_dataset_map(dataset_root, category, 'fewview_dev')
+        dataset_map = get_dataset_map(dataset_root, category, 'manyview_dev_0')
         for stage in ["train", "val"]:
             cache_path = f'dataset_cache_new/{category}_{stage}.pt'
             current_map = dataset_map[stage]
