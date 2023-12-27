@@ -163,7 +163,7 @@ class GaussianDiffusion(nn.Module):
         )  # default num sampling timesteps to number of timesteps at training
 
         assert self.sampling_timesteps <= timesteps
-        self.is_ddim_sampling = self.sampling_timesteps < timesteps
+        self.is_ddim_sampling = False
         self.ddim_sampling_eta = ddim_sampling_eta
 
         # helper function to register buffer from float64 to float32
