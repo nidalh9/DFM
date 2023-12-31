@@ -46,7 +46,6 @@ ModelPrediction = namedtuple(
 
 def right_pad_dims_to(x, t):
     padding_dims = x.ndim - t.ndim
-    print("n")
     if padding_dims <= 0:
         return t
     return t.view(*t.shape, *((1,) * padding_dims))
