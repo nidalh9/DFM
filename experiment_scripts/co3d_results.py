@@ -406,8 +406,8 @@ def train(cfg: DictConfig):
                 inp["ctxt_rgb"] = inp["ctxt_rgb"][:, 0:1]
                 inp["ctxt_c2w"] = inp["ctxt_c2w"][:, 0:1]
                 inp["ctxt_abs_camera_poses"] = inp["ctxt_abs_camera_poses"][:, 0:1]
-                inp["trgt_c2w"] = inp["trgt_c2w"][:, 100:101]
-                inp["trgt_abs_camera_poses"] = inp["trgt_abs_camera_poses"][:, 100:101]
+                inp["trgt_c2w"] = inp["trgt_c2w"][:, 10:11]
+                inp["trgt_abs_camera_poses"] = inp["trgt_abs_camera_poses"][:, 10:11]
 
                 for j in range(1):
                     print(f"Starting sample {j}")
