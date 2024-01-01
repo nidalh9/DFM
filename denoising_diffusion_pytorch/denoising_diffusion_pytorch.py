@@ -433,6 +433,7 @@ class GaussianDiffusion(nn.Module):
             "rgb": rgb,
             "depth": depth,
             "depth_videos": depth_frames,
+            "conditioning_depth": inp["trgt_rgbd"][:, 3, :, :],
             "td_videos": td_frames,
             "td_depth_videos": td_depth_frames,
         }
