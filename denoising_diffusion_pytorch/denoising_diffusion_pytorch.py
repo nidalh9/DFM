@@ -103,7 +103,7 @@ class GaussianDiffusion(nn.Module):
         self,
         model,
         image_size,
-        timesteps=1000,
+        timesteps=10,
         sampling_timesteps=None,
         loss_type="l1",
         objective="pred_noise",
@@ -1100,7 +1100,7 @@ class Trainer(object):
 
         # model = self.accelerator.unwrap_model(self.model)
         model = self.model
-        print(f"model parameter names: {list(model.state_dict().keys())}")
+        # print(f"model parameter names: {list(model.state_dict().keys())}")
         # load all parameteres
         data["model"].pop("model.enc.pos_embed")
         print(model.load_state_dict(data["model"], strict=False))
