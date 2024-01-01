@@ -393,8 +393,8 @@ class GaussianDiffusion(nn.Module):
             inp["trgt_rgbd"] = trgt_rgbd
             clean_ctxt_feats = ctxt_feats
             inp["clean_ctxt_feats"] = clean_ctxt_feats
-            inp["uncond_trgt_rgbd"] = None
-            inp["uncond_clean_ctxt_feats"] = None
+            inp["uncond_trgt_rgbd"] = trgt_rgbd
+            inp["uncond_clean_ctxt_feats"] = ctxt_feats
 
         for t in tqdm(
             reversed(range(0, self.num_timesteps)),
