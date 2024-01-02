@@ -142,8 +142,8 @@ def train(cfg: DictConfig):
     diffusion = GaussianDiffusion(
         model,
         image_size=dataset.image_size,
-        timesteps=10,  # number of steps
-        sampling_timesteps=10,
+        timesteps=1000,  # number of steps
+        sampling_timesteps=1000,
         loss_type="l2",  # L1 or L2
         objective="pred_x0",
         beta_schedule="cosine",
