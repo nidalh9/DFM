@@ -920,7 +920,7 @@ class Trainer(object):
         augment_horizontal_flip=True,
         train_lr=1e-4,
         train_num_steps=100000,
-        [ema_update_every]=10,
+        ema_update_every=10,
         ema_decay=0.995,
         adam_betas=(0.9, 0.99),
         sample_every=1000,
@@ -1104,7 +1104,7 @@ class Trainer(object):
         # print(f"model parameter names: {list(model.state_dict().keys())}")
         # load all parameteres
         data["model"].pop("model.enc.pos_embed")
-        # print(model.load_state_dict(data["model"], strict=False))
+        print(model.load_state_dict(data["model"], strict=False))
 
         try:
             self.step = data["step"]
