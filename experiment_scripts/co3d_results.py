@@ -143,7 +143,7 @@ def train(cfg: DictConfig):
         model,
         image_size=dataset.image_size,
         timesteps=1000,  # number of steps
-        sampling_timesteps=100,
+        sampling_timesteps=50,
         loss_type="l2",  # L1 or L2
         objective="pred_x0",
         beta_schedule="cosine",
