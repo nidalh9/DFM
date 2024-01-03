@@ -143,7 +143,7 @@ def train(cfg: DictConfig):
         model,
         image_size=dataset.image_size,
         timesteps=1000,  # number of steps
-        sampling_timesteps=1000,
+        sampling_timesteps=100,
         loss_type="l2",  # L1 or L2
         objective="pred_x0",
         beta_schedule="cosine",
@@ -406,8 +406,8 @@ def train(cfg: DictConfig):
                 inp["ctxt_rgb"] = inp["ctxt_rgb"][:, 0:1]
                 inp["ctxt_c2w"] = inp["ctxt_c2w"][:, 0:1]
                 inp["ctxt_abs_camera_poses"] = inp["ctxt_abs_camera_poses"][:, 0:1]
-                inp["trgt_c2w"] = inp["trgt_c2w"][:, 10:11]
-                inp["trgt_abs_camera_poses"] = inp["trgt_abs_camera_poses"][:, 10:11]
+                inp["trgt_c2w"] = inp["trgt_c2w"][:, 50:51]
+                inp["trgt_abs_camera_poses"] = inp["trgt_abs_camera_poses"][:, 50:51]
 
                 for j in range(1):
                     print(f"Starting sample {j}")
