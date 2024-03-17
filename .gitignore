@@ -1,1 +1,5 @@
 __pycache__
+files/
+wandb/
+dataset_cache_new/
+outputs/
